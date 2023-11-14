@@ -9,18 +9,20 @@ class Note extends PIR {
     private String content;
 
     public Note(String filename, String content) {
-        super.filename = filename;
-        this.content = content;
+        setFN(filename);
+        setContent(content);
     }
 
     public Note(String filename) {
-        super.filename = filename;
-        this.content = readFile(filename);
+        setFN(filename);
     }
 
-    public String readFile(String filename) {
+    // Setter
+    public void setContent(String arg) {this.content = arg;}
+    // Getter
+    public String getContent() {return this.content;}
 
-        String result = "";
+    public void readFile(String filename) {
 
         final String path = "repository\\" + filename + ".pim";
 
@@ -31,27 +33,18 @@ class Note extends PIR {
             // Line 1: Classification Code
             if ((myReader.nextLine()).equals("N")) {
                 // Line 2: Content
-                result = myReader.nextLine();
-            };
+                setContent(myReader.nextLine());
+            }
             myReader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("File is not found");
             e.printStackTrace();
-        } finally {
-
         }
-          
-        return result;
-    }
-
-    @Override
-    public String getPirType() {
-        return "N";
     }
 
     public void writeFile() {
 
-        final String path = "repository\\" + super.filename + ".pim";
+        final String path = "repository\\" + getFN() + ".pim";
 
         try {
             // Create file
@@ -61,27 +54,26 @@ class Note extends PIR {
 
                 // Write to file
                 FileWriter myWriter = new FileWriter(path);
-                myWriter.write(getPirType()); // Line 1: Classification Code
-                myWriter.write("\n");
-                myWriter.write(this.content); // Line 2: Note content
+                myWriter.write("N\n"); // Line 1: Classification Code
+                myWriter.write(getContent()); // Line 2: Note content
                 myWriter.close();
                 System.out.println("Successfully wrote to the file.");
             } else {
-                System.out.println("File already exists.");
+                throw new IOException();
             }
         } catch (IOException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
+            System.out.println("File already exists.");
         }
     }
 
     public String toString() {
-        
-        String result = "";
 
-        result =    "Title: " + this.filename + "\n" +
-                    "Content: " + this.content;
+        return  "Title: " + getFN() + "\n" +
+                "Content: " + getContent();
+    }
 
-        return result;
+    // Searching
+    public boolean isContent(String arg) {
+        return PIR.isContainString(getContent(), arg);
     }
 }

@@ -1,4 +1,5 @@
 import java.io.File;
+import java.util.Scanner;  // Import the Scanner class
 
 public class Controller {
 
@@ -7,8 +8,31 @@ public class Controller {
         File directory = new File(directoryName);
         if (! directory.exists()){
             directory.mkdir();
-            // If you require it to make the entire directory path including parents,
-            // use directory.mkdirs(); here instead.
+        }
+    }
+
+    public static void mainInterface() {
+
+        String option = "";
+        Scanner input = new Scanner(System.in);  // Create a Scanner object
+
+
+        System.out.println("Welcome to PIM. Please choose your operation:");
+        System.out.println("1: Create new PIR");
+        System.out.println("2: Search PIR");
+        System.out.println("3: Print all PIR");
+
+        option = input.nextLine();
+
+        switch (option) {
+            case ("1"):
+                Controller.createInterface();
+                break;
+            case ("2"):
+                Controller.searchInterface();
+                break;
+            case ("3"):
+                Controller.printAllInterface();
         }
     }
 
@@ -17,14 +41,5 @@ public class Controller {
         // Make directory for first operation
         Controller.makeDir();
 
-        String filename = "Test Note";
-        String content = "Hello World";
-
-        Note N = new Note(filename, content);
-        N.writeFile();
-        System.out.println(N.toString());
-
-        Note A = new Note(filename);
-        System.out.println(A);
     }
 }
