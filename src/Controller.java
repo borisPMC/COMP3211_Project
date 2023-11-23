@@ -1,10 +1,11 @@
 import java.io.File;
-import java.nio.channels.SelectionKey;
-import java.text.ParseException;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Scanner;  // Import the Scanner class
-import java.util.Date;
 
 public class Controller {
 
@@ -51,7 +52,6 @@ public class Controller {
     }
 
     public static void createInterface() {
-
         String option = "";
         Scanner input = new Scanner(System.in);  // Create a Scanner object
 
@@ -61,7 +61,43 @@ public class Controller {
         option = input.nextLine();
         switch (option) {
             case ("1"):
-
+                System.out.println("Please input the name of the pim file");
+                String fileName = input.nextLine();
+                String path = "repository\\" + fileName + ".pim";
+                try {
+                    File myObj = new File(path);
+                    Scanner myReader = new Scanner(myObj);
+                    while (myReader.hasNextLine()) {
+                        String classifier = myReader.nextLine();
+                        System.out.println(classifier);
+                        if (classifier.equals("N")) {
+                            Note note = new Note("123", "");
+                            note.setContent(myReader.nextLine());
+                            ArrForNote.add(note);
+                        } else if (classifier.equals("T")) {
+                            Task task = new Task("123", "", "");
+                            task.setDescription(myReader.nextLine());
+                            task.setDeadline(myReader.nextLine());
+                            ArrForTask.add(task);
+                        } else if (classifier.equals("E")) {
+                            Event event = new Event("123", "", "", "");
+                            event.setDescription(myReader.nextLine());
+                            event.setStart(myReader.nextLine());
+                            event.setAlarm(myReader.nextLine());
+                            ArrForEvent.add(event);
+                        } else if (classifier.equals("C")) {
+                            Contact contact = new Contact("123", "", "", "");
+                            contact.setName(myReader.nextLine());
+                            contact.setAddress(myReader.nextLine());
+                            contact.setPhone(myReader.nextLine());
+                            ArrForContact.add(contact);
+                        }
+                    }
+                    myReader.close();
+                } catch (FileNotFoundException e) {
+                    System.out.println("File is not found");
+                    e.printStackTrace();
+                }
                 break;
             case ("2"):
                 System.out.println("Please choose the type of PIR");
@@ -434,10 +470,10 @@ public class Controller {
                     String option3 = input.nextLine();
                     switch (option3) {
                         case ("1"):
-                            moreConditionForTask = true;
+                            moreConditionForEvent = true;
                             break;
                         case ("2"):
-                            moreConditionForTask = false;
+                            moreConditionForEvent = false;
                             break;
                     }
                 }
@@ -638,6 +674,45 @@ public class Controller {
 
     public static void printAllInterface() {
         System.out.println("Printing out all PIRs");
+        final String path = "repository\\" + "123" + ".pim";
+
+        try {
+            File myObj = new File(path);
+            if (myObj.createNewFile()) {
+                System.out.println("File created: " + myObj.getName());
+
+                FileWriter myWriter = new FileWriter(path);
+                for (int i = 0;i < ArrForNote.size(); i++) {
+                    myWriter.write("N\n");
+                    myWriter.write(ArrForNote.get(i).getContent() + "\n");
+                }
+                for (int i = 0;i < ArrForTask.size(); i++) {
+                    myWriter.write("T\n");
+                    myWriter.write(ArrForTask.get(i).getDescription() + "\n");
+                    DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+                    myWriter.write(df.format(ArrForTask.get(i).getDeadline()) + "\n");
+                }
+                for (int i = 0;i < ArrForEvent.size(); i++) {
+                    myWriter.write("E\n");
+                    myWriter.write(ArrForEvent.get(i).getDescription() + "\n");
+                    DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+                    myWriter.write(df.format((ArrForEvent.get(i).getStart())) + "\n");
+                    myWriter.write(df.format((ArrForEvent.get(i).getAlarm())) + "\n");
+                }
+                for (int i = 0;i < ArrForContact.size(); i++) {
+                    myWriter.write("C\n");
+                    myWriter.write(ArrForContact.get(i).getName()+"\n");
+                    myWriter.write(ArrForContact.get(i).getAddress()+"\n");
+                    myWriter.write(ArrForContact.get(i).getPhone()+"\n");
+                }
+                myWriter.close();
+                System.out.println("Successfully wrote to the file.");
+            } else {
+                throw new IOException();
+            }
+        } catch (IOException e) {
+            System.out.println("File already exists.");
+        }
         mainInterface();
     }
 
@@ -645,7 +720,6 @@ public class Controller {
 
         // Make directory for first operation
         Controller.makeDir();
-        Scanner input = new Scanner(System.in);
         Controller.mainInterface();
 
     }
