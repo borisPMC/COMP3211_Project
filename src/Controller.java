@@ -69,25 +69,29 @@ public class Controller {
                     Scanner myReader = new Scanner(myObj);
                     while (myReader.hasNextLine()) {
                         String classifier = myReader.nextLine();
-                        System.out.println(classifier);
                         if (classifier.equals("N")) {
-                            Note note = new Note("123", "");
+                            Note note = new Note("", "");
+                            note.setFN(myReader.nextLine());
                             note.setContent(myReader.nextLine());
                             ArrForNote.add(note);
                         } else if (classifier.equals("T")) {
-                            Task task = new Task("123", "", "");
+                            Task task = new Task("", "", "");
+                            task.setFN(myReader.nextLine());
                             task.setDescription(myReader.nextLine());
                             task.setDeadline(myReader.nextLine());
                             ArrForTask.add(task);
                         } else if (classifier.equals("E")) {
-                            Event event = new Event("123", "", "", "");
+                            Event event = new Event("", "", "", "");
+                            event.setFN(myReader.nextLine());
                             event.setDescription(myReader.nextLine());
                             event.setStart(myReader.nextLine());
                             event.setAlarm(myReader.nextLine());
                             ArrForEvent.add(event);
                         } else if (classifier.equals("C")) {
-                            Contact contact = new Contact("123", "", "", "");
-                            contact.setName(myReader.nextLine());
+                            Contact contact = new Contact("", "", "");
+                            String name = myReader.nextLine();
+                            contact.setFN(name);
+                            contact.setName(name);
                             contact.setAddress(myReader.nextLine());
                             contact.setPhone(myReader.nextLine());
                             ArrForContact.add(contact);
@@ -108,27 +112,33 @@ public class Controller {
                     String optionInside = input.nextLine();
                     switch (optionInside) {
                         case ("1"):
+                            System.out.println("Please input the title of note");
+                            String fileNameForNote = input.nextLine();
                             System.out.println("Please input the texts to the note");
                             String contentForContent = input.nextLine();
-                            Note note = new Note("123", contentForContent);
+                            Note note = new Note(fileNameForNote, contentForContent);
                             ArrForNote.add(note);
                             break;
                         case ("2"):
+                            System.out.println("Please input the title of task");
+                            String fileNameForTask = input.nextLine();
                             System.out.println("Please input the descriptions of task");
                             String descriptionsForTask = input.nextLine();
                             System.out.println("Please input the deadline of tasks in format dd/MM/yyyy");
                             String deadlineForTask = input.nextLine();
-                            Task task = new Task("123", descriptionsForTask, deadlineForTask);
+                            Task task = new Task(fileNameForTask, descriptionsForTask, deadlineForTask);
                             ArrForTask.add(task);
                             break;
                         case ("3"):
+                            System.out.println("Please input the descriptions of event");
+                            String fileNameForEvent = input.nextLine();
                             System.out.println("Please input the descriptions of event");
                             String descriptionsForEvent = input.nextLine();
                             System.out.println("Please input the starting times of event in format dd/MM/yyyy");
                             String startingTimeForEvent = input.nextLine();
                             System.out.println("Please input the alarm of event in format dd/MM/yyyy");
                             String alarmForEvent = input.nextLine();
-                            Event event = new Event("123", descriptionsForEvent, startingTimeForEvent, alarmForEvent);
+                            Event event = new Event(fileNameForEvent, descriptionsForEvent, startingTimeForEvent, alarmForEvent);
                             ArrForEvent.add(event);
                             break;
                         case ("4"):
@@ -138,7 +148,7 @@ public class Controller {
                             String addressForContact = input.nextLine();
                             System.out.println("Please input the mobile number of contact");
                             String mobileNumberForContact = input.nextLine();
-                            Contact contact = new Contact("123", nameForContact, addressForContact, mobileNumberForContact);
+                            Contact contact = new Contact(nameForContact, addressForContact, mobileNumberForContact);
                             ArrForContact.add(contact);
                             break;
                     }
@@ -673,8 +683,10 @@ public class Controller {
     }
 
     public static void printAllInterface() {
-        System.out.println("Printing out all PIRs");
-        final String path = "repository\\" + "123" + ".pim";
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please input the file name for outputted pim file");
+        String filename = input.nextLine();
+        final String path = "repository\\" + filename + ".pim";
 
         try {
             File myObj = new File(path);
@@ -684,16 +696,19 @@ public class Controller {
                 FileWriter myWriter = new FileWriter(path);
                 for (int i = 0;i < ArrForNote.size(); i++) {
                     myWriter.write("N\n");
+                    myWriter.write(ArrForNote.get(i).getFN() + "\n");
                     myWriter.write(ArrForNote.get(i).getContent() + "\n");
                 }
                 for (int i = 0;i < ArrForTask.size(); i++) {
                     myWriter.write("T\n");
+                    myWriter.write(ArrForTask.get(i).getFN() + "\n");
                     myWriter.write(ArrForTask.get(i).getDescription() + "\n");
                     DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
                     myWriter.write(df.format(ArrForTask.get(i).getDeadline()) + "\n");
                 }
                 for (int i = 0;i < ArrForEvent.size(); i++) {
                     myWriter.write("E\n");
+                    myWriter.write(ArrForEvent.get(i).getFN() + "\n");
                     myWriter.write(ArrForEvent.get(i).getDescription() + "\n");
                     DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
                     myWriter.write(df.format((ArrForEvent.get(i).getStart())) + "\n");
