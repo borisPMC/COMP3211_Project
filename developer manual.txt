@@ -1,41 +1,47 @@
-The documentation summarises the environment requirement and compilation/debugging procedure.
+Developer Manual
+This manual provides the necessary information to set up the development environment, compile, build, and debug the project.
 
-Environment requirement:
-
-- JDK ^19.0.2
-- JUnit ^5.7.0
+Environment Requirements
+- JDK 19.0.2
 - IntelliJ IDEA Community Edition 2021.2.3
 
-Compilation procedure:
+Setting Up the Project
+- Open IntelliJ IDEA.
+- Click on File > Open.
+- Navigate to the project directory and click OK.
 
-1. Open IntelliJ IDEA
-2. Open src/model/Main.java
-3. Click "Run Main.java" at the top-right, the IDE compiles it automatically
-4. Interact PIM on the command line interface at bottom-left
+Compilation Procedure
+- Open the src/model/Main.java file in IntelliJ IDEA.
+- Click on Build > Build Project in the menu bar. IntelliJ IDEA compiles the project automatically.
+- Running the Project
+- Open the src/model/Main.java file in IntelliJ IDEA.
+- Click on the green arrow next to the main method, or click Run > Run 'Main' in the menu bar.
 
-Debugging procedure:
+Debugging Procedure
+- Open any source code files in src/model.
+- Click on the left side of the line number to set breakpoints for monitoring the behavior of the program.
+- Open the src/model/Main.java file.
+- Click on the bug icon next to the main method, or click Run > Debug 'Main' in the menu bar.
+- The program will stop at the breakpoints, and you can inspect the variables and step through the code.
 
-1. Open IntelliJ IDEA
-2. Open any source code files in src/model
-3. Pin desired code line by clicking the RHS of the line number (for monitoring behaviour of the program)
-4. Open Main.java
-5. Click "Debug Main.java" at the top-right
-6. Interact PIM on the command line interface at bottom-left
+Unit Testing
+- Test Classes are stored in the test folder. There are also 3 input sets in the test_case folder for automatically testing the whole procedure.
 
-Unit Test:
+To run the tests:
 
-Test Classes are stored at the test folder.
-There are also 3 input sets in test_case folder for automatically test the whole procedure.
-
-WARNING: the following PIM files are for test usage, deleting it results failure in unit tests:
-input_test.pim
-test_case_1.pim
-test_case_2.pim
-test_case_3.pim
+- Right-click on the test folder and click Run 'All Tests'.
 
 To test coverage:
-1. Open IntelliJ IDEA
-2. Open any test class in test folder
-3. Right click test folder and click "Run 'All Tests' with Coverage".
-4. View the code coverage
 
+- Right-click on the test folder and click Run 'All Tests' with Coverage.
+- View the code coverage in the Coverage tool window.
+
+Warning
+The following PIM files are for test usage. Deleting them will result in failure in unit tests:
+
+- input_test.pim
+- test_case_1.pim
+- test_case_2.pim
+- test_case_3.pim
+
+Thank you for reading this manual.

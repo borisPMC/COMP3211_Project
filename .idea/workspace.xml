@@ -2,107 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e2477f0-4a59-45a2-9ca1-beb12acb8199" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user manual.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/developer manual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/developer manual.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/Contact.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/Event.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/Note.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/PIR.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/ContactTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/ControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/EventTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/NoteTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/PirTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/TaskTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/css/coverage.css" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/css/coverage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/css/highlight-idea.css" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/css/highlight-idea.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/img/arrowDown.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/img/arrowDown.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/img/arrowUp.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/img/arrowUp.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_CLASS.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_CLASS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_CLASS_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_LINE.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_LINE.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_LINE_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_LINE_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_METHOD.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_METHOD.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/index_SORT_BY_NAME_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_NAME_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/js/highlight.pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/js/highlight.pack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_CLASS.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_LINE.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_LINE.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_LINE_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_METHOD.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_NAME_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/sources/source-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/sources/source-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/sources/source-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/sources/source-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/sources/source-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/Test Coverage Report/ns-1/sources/source-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/test_case/case_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/test_case/case_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/test_case/case_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PIR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PIR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ContactTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestModel/ContactTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestModel/ControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/EventTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestModel/EventTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/NoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestModel/NoteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/PirTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestModel/TaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/css/coverage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/css/highlight-idea.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/img/arrowDown.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/img/arrowUp.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_BLOCK.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_BLOCK.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_METHOD_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/js/highlight.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_BLOCK.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/sources/source-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/sources/source-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/sources/source-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/sources/source-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/sources/source-5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/sources/source-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Test Coverage Report/ns-1/sources/source-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_case/case_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/case_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_case/case_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/case_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_case/case_3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test_case/case_3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user manual" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
