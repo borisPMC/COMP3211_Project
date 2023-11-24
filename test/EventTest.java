@@ -1,15 +1,10 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 class EventTest {
 
@@ -59,34 +54,6 @@ class EventTest {
         Event event = new Event("testEvent");
         event.setAlarm("01/01/2023");
         assertEquals("01/01/2023", new SimpleDateFormat("dd/MM/yyyy").format(event.getAlarm()));
-    }
-
-    @Test
-    void testReadAndWriteFile() {
-        // Create a temporary file for testing
-        String testFileName = "testEventReadWrite";
-        String originalDescription = "Test Read Write Event Description";
-        String originalStart = "01/01/2023";
-        String originalAlarm = "31/12/2022";
-        Event eventWrite = new Event(testFileName, originalDescription, originalStart, originalAlarm);
-
-        // Perform the write operation
-        eventWrite.writeFile();
-
-        // Read the file to check if content is written correctly
-        Event eventRead = new Event(testFileName);
-        eventRead.readFile(testFileName);
-
-        // Verify the content
-        assertEquals(originalDescription, eventRead.getDescription());
-        assertEquals(originalStart, new SimpleDateFormat("dd/MM/yyyy").format(eventRead.getStart()));
-        assertEquals(originalAlarm, new SimpleDateFormat("dd/MM/yyyy").format(eventRead.getAlarm()));
-
-        // Clean up: Delete the temporary file
-        File file = new File("repository\\" + testFileName + ".pim");
-        if (!file.delete()) {
-            fail("Failed to delete the test file.");
-        }
     }
 
     @Test

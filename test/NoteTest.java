@@ -1,6 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
@@ -21,51 +20,10 @@ class NoteTest {
     }
 
     @Test
-    void testGetPirType() {
-        // Create a temporary file for testing
-        String testFileName = "testReadWriteFile";
-        String originalContent = "Test Read Write File Content";
-        Note note = new Note(testFileName, originalContent);
-        note.writeFile();
-
-        assertEquals("N", Note.getPirType("testReadWriteFile"));
-
-        // Clean up: Delete the temporary file
-        java.io.File file = new java.io.File("repository\\" + testFileName + ".pim");
-        if (!file.delete()) {
-            fail("Failed to delete the test file.");
-        }
-    }
-
-    @Test
     void testSetAndGetContent() {
         Note note = new Note("testNote", "test content");
         note.setContent("Updated content");
         assertEquals("Updated content", note.getContent());
-    }
-
-    @Test
-    void testReadWriteFile() {
-        // Create a temporary file for testing
-        String testFileName = "testReadWriteFile";
-        String originalContent = "Test Read Write File Content";
-        Note noteWrite = new Note(testFileName, originalContent);
-
-        // Perform the write operation
-        noteWrite.writeFile();
-
-        // Read the file to check if content is written correctly
-        Note noteRead = new Note(testFileName);
-        noteRead.readFile(testFileName);
-
-        // Verify the content
-        assertEquals(originalContent, noteRead.getContent());
-
-        // Clean up: Delete the temporary file
-        java.io.File file = new java.io.File("repository\\" + testFileName + ".pim");
-        if (!file.delete()) {
-            fail("Failed to delete the test file.");
-        }
     }
 
     @Test

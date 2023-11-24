@@ -45,39 +45,13 @@ class TaskTest {
     }
 
     @Test
-    void testReadAndWriteFile() {
-        // Create a temporary file for testing
-        String testFileName = "testTaskReadWrite";
-        String originalDescription = "Test Read Write Task Description";
-        String originalDeadline = "01/01/2023";
-        Task taskWrite = new Task(testFileName, originalDescription, originalDeadline);
-
-        // Perform the write operation
-        taskWrite.writeFile();
-
-        // Read the file to check if content is written correctly
-        Task taskRead = new Task(testFileName);
-        taskRead.readFile(testFileName);
-
-        // Verify the content
-        assertEquals(originalDescription, taskRead.getDescription());
-        assertEquals(originalDeadline, new SimpleDateFormat("dd/MM/yyyy").format(taskRead.getDeadline()));
-
-        // Clean up: Delete the temporary file
-        java.io.File file = new java.io.File("repository\\" + testFileName + ".pim");
-        if (!file.delete()) {
-            fail("Failed to delete the test file.");
-        }
-    }
-
-    @Test
     void testToString() {
         String testFileName = "testTaskToString";
         String description = "Test Task Description";
         String deadline = "01/01/2023";
         Task task = new Task(testFileName, description, deadline);
 
-        String expected = "Title: testTaskToString\nDescription: Test Task DescriptionDeadline 01/01/2023";
+        String expected = "Title: testTaskToString\nDescription: Test Task Description\nDeadline: 01/01/2023";
         assertEquals(expected, task.toString());
     }
 

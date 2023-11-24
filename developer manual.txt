@@ -1,0 +1,40 @@
+The documentation summarises the environment requirement and compilation/debugging procedure.
+
+Environment requirement:
+
+- JDK ^19.0.2
+- JUnit ^5.7.0
+- IntelliJ IDEA Community Edition 2021.2.3
+
+Compilation procedure:
+
+1. Open IntelliJ IDEA
+2. Open src/Main.java
+3. Click "Run Main.java" at the top-right, the IDE compiles it automatically
+4. Interact PIM on the command line interface at bottom-left
+
+Debugging procedure:
+
+1. Open IntelliJ IDEA
+2. Open any source code files in src folder
+3. Pin desired code line by clicking the RHS of the line number (for monitoring behaviour of the program)
+4. Open Main.java
+5. Click "Debug Main.java" at the top-right
+6. Interact PIM on the command line interface at bottom-left
+
+Unit Test:
+
+Test Classes are stored at the test folder.
+There are also 3 input sets in test_case folder for automatically test the whole procedure.
+
+WARNING: the following PIM files are for test usage, deleting it results failure in unit tests:
+input_test.pim
+test_case_1.pim
+test_case_2.pim
+test_case_3.pim
+
+To perform:
+1. Open IntelliJ IDEA
+2. Open any test class in test folder
+3. Run the code.
+

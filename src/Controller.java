@@ -14,54 +14,87 @@ public class Controller {
         }
     }
 
+    private static boolean requestCriteria(Scanner input) {
+
+        Boolean moreCondition = false;
+
+        System.out.println("Do you need more condition?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+        boolean wrongInputInside2 = true;
+        while (wrongInputInside2) {
+            String option3 = input.nextLine();
+            switch (option3) {
+                case ("1"):
+                    moreCondition = true;
+                    wrongInputInside2 = false;
+                    break;
+                case ("2"):
+                    moreCondition = false;
+                    wrongInputInside2 = false;
+                    break;
+                default :
+                    System.out.println("Wrong value inputted, please type again!");
+                    wrongInputInside2 = true;
+            }
+        }
+        return moreCondition;
+    }
+
+    // for tests
+    static void reset() {
+        // Delete the generated file if it exists
+        Controller.ArrForNote.clear();
+        Controller.ArrForTask.clear();
+        Controller.ArrForEvent.clear();
+        Controller.ArrForContact.clear();
+    }
+
+
     static ArrayList<Note> ArrForNote = new ArrayList<Note>();
     static ArrayList<Task> ArrForTask = new ArrayList<Task>();
     static ArrayList<Event> ArrForEvent = new ArrayList<Event>();
     static ArrayList<Contact> ArrForContact = new ArrayList<Contact>();
 
 
-    public static void mainInterface() {
+    public static void mainInterface(Scanner input) {
 
         String option = "";
-        Scanner input = new Scanner(System.in);  // Create a Scanner object
 
-        System.out.println("Welcome to PIM. Please choose your operation:");
-        System.out.println("1: Create new PIR");
-        System.out.println("2: Search PIR");
-        System.out.println("3: Print all PIR");
-        System.out.println("4: Exit");
+        boolean endFlag = false;
+        while (!endFlag) {
+            System.out.println("Welcome to PIM. Please choose your operation:");
+            System.out.println("1: Create new PIR");
+            System.out.println("2: Search PIR");
+            System.out.println("3: Print all PIR");
+            System.out.println("4: Exit");
 
-        boolean wrongInput = true;
-        while (wrongInput) {
             option = input.nextLine();
             switch (option) {
                 case ("1"):
-                    Controller.createInterface();
-                    wrongInput = false;
+                    Controller.createInterface(input);
                     break;
                 case ("2"):
-                    Controller.searchInterface();
-                    wrongInput = false;
+                    Controller.searchInterface(input);
                     break;
                 case ("3"):
-                    Controller.printAllInterface();
-                    wrongInput = false;
+                    Controller.printAllInterface(input);
                     break;
                 case ("4"):
                     System.out.println("Goodbye!");
-                    wrongInput = false;
-                    System.exit(0);
+                    endFlag = true;
+                    break;
                 default:
                     System.out.println("Wrong value inputted, please type again!");
-                    wrongInput = true;
                     break;
             }
         }
+        reset();
+        return;
     }
 
-    public static void createInterface() {
+    public static void createInterface(Scanner input) {
         String option = "";
-        Scanner input = new Scanner(System.in);  // Create a Scanner object
 
         System.out.println("Please choose the input format of PIR");
         System.out.println("1: Input pim files");
@@ -110,7 +143,6 @@ public class Controller {
                         myReader.close();
                     } catch (FileNotFoundException e) {
                         System.out.println("File is not found");
-                        mainInterface();
                     }
                     wrongInput = false;
                     break;
@@ -182,11 +214,10 @@ public class Controller {
             }
         }
         System.out.println("Successfully added PIR");
-        mainInterface();
+        return;
     }
 
-    public static void searchInterface() {
-        Scanner input = new Scanner(System.in);
+    public static void searchInterface(Scanner input) {
         String content = "";
         System.out.println("Please choose the type of PIR:");
         System.out.println("1: Note");
@@ -204,9 +235,9 @@ public class Controller {
                         System.out.println("Please choose the condition for note:");
                         System.out.println("1. The string contain in content");
                         System.out.println("2. The string not contain in content");
-                        String option2 = input.nextLine();
                         boolean wrongInputInside = true;
                         while (wrongInputInside) {
+                            String option2 = input.nextLine();
                             switch (option2) {
                                 case ("1"):
                                     System.out.println("Please choose the string to be contained in content");
@@ -237,26 +268,7 @@ public class Controller {
                                     wrongInputInside = true;
                             }
                         }
-                        System.out.println("Do you need more condition?");
-                        System.out.println("1. Yes");
-                        System.out.println("2. No");
-                        boolean wrongInputInside2 = true;
-                        while (wrongInputInside2) {
-                            String option3 = input.nextLine();
-                            switch (option3) {
-                                case ("1"):
-                                    moreConditionForNote = true;
-                                    wrongInputInside2 = false;
-                                    break;
-                                case ("2"):
-                                    moreConditionForNote = false;
-                                    wrongInputInside2 = false;
-                                    break;
-                                default :
-                                    System.out.println("Wrong value inputted, please type again!");
-                                    wrongInputInside2 = true;
-                            }
-                        }
+                        moreConditionForNote = requestCriteria(input);
                     }
                     int result = 0;
                     if (SelectedArrForNote.size() != 0) {
@@ -325,9 +337,9 @@ public class Controller {
                         System.out.println("Please choose the condition for task:");
                         System.out.println("1. The string contain in description");
                         System.out.println("2. The string not contain in description");
-                        System.out.println("3. The date before deadline");
-                        System.out.println("4. The date after deadline");
-                        System.out.println("5. The date equal deadline");
+                        System.out.println("3. Selected date (>) deadline");
+                        System.out.println("4. Selected date (<) deadline");
+                        System.out.println("5. Selected date (=) deadline");
                         boolean wrongInputInside = true;
                         while (wrongInputInside) {
                             String option2 = input.nextLine();
@@ -357,7 +369,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("3"):
-                                    System.out.println("Please choose the date that before deadline in format dd/MM/yyyy");
+                                    System.out.println("The chosen deadline shall be before (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Task> tempArr3 = new ArrayList<Task>();
                                     for (int i = 0; i < SelectedArrForTask.size(); i++) {
@@ -369,7 +381,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("4"):
-                                    System.out.println("Please choose the date that after deadline in format dd/MM/yyyy");
+                                    System.out.println("The chosen deadline shall be after (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Task> tempArr4 = new ArrayList<Task>();
                                     for (int i = 0; i < SelectedArrForTask.size(); i++) {
@@ -381,7 +393,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("5"):
-                                    System.out.println("Please choose the date that before deadline in format dd/MM/yyyy");
+                                    System.out.println("The chosen deadline shall be on (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Task> tempArr5 = new ArrayList<Task>();
                                     for (int i = 0; i < SelectedArrForTask.size(); i++) {
@@ -398,27 +410,7 @@ public class Controller {
                                     break;
                             }
                         }
-                        System.out.println("Do you need more condition?");
-                        System.out.println("1. Yes");
-                        System.out.println("2. No");
-                        boolean wrongInputInside2 = true;
-                        while (wrongInputInside2) {
-                            String option3 = input.nextLine();
-                            switch (option3) {
-                                case ("1"):
-                                    moreConditionForTask = true;
-                                    wrongInputInside2 = false;
-                                    break;
-                                case ("2"):
-                                    moreConditionForTask = false;
-                                    wrongInputInside2 = false;
-                                    break;
-                                default :
-                                    System.out.println("Wrong value inputted, please type again!");
-                                    wrongInputInside2 = true;
-                                    break;
-                            }
-                        }
+                        moreConditionForTask = requestCriteria(input);
                     }
                     result = 0;
                     if (SelectedArrForTask.size() != 0) {
@@ -491,15 +483,15 @@ public class Controller {
                     ArrayList<Event> SelectedArrForEvent = ArrForEvent;
                     boolean moreConditionForEvent = true;
                     while (moreConditionForEvent) {
-                        System.out.println("Please choose the condition for task:");
+                        System.out.println("Please choose the condition for event:");
                         System.out.println("1. The string contain in description");
                         System.out.println("2. The string not contain in description");
-                        System.out.println("3. The date before starting times");
-                        System.out.println("4. The date after starting times");
-                        System.out.println("5. The date equal starting times");
-                        System.out.println("6. The date before alarm");
-                        System.out.println("7. The date after alarm");
-                        System.out.println("8. The date equal alarm");
+                        System.out.println("3. Selected date (>) starting time");
+                        System.out.println("4. Selected date (<) starting time");
+                        System.out.println("5. Selected date (=) starting time");
+                        System.out.println("6. Selected date (>) alarm time");
+                        System.out.println("7. Selected date (<) alarm time");
+                        System.out.println("8. Selected date (=) alarm time");
                         boolean wrongInputInside = true;
                         while (wrongInputInside) {
                             String option2 = input.nextLine();
@@ -529,7 +521,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("3"):
-                                    System.out.println("Please choose the date that before starting time in format dd/MM/yyyy");
+                                    System.out.println("The chosen start time shall be before (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Event> tempArr3 = new ArrayList<Event>();
                                     for (int i = 0; i < SelectedArrForEvent.size(); i++) {
@@ -541,7 +533,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("4"):
-                                    System.out.println("Please choose the date that after starting time in format dd/MM/yyyy");
+                                    System.out.println("The chosen start time shall be after (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Event> tempArr4 = new ArrayList<Event>();
                                     for (int i = 0; i < SelectedArrForEvent.size(); i++) {
@@ -553,7 +545,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("5"):
-                                    System.out.println("Please choose the date that equal starting time in format dd/MM/yyyy");
+                                    System.out.println("The chosen start time shall be on (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Event> tempArr5 = new ArrayList<Event>();
                                     for (int i = 0; i < SelectedArrForEvent.size(); i++) {
@@ -565,7 +557,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("6"):
-                                    System.out.println("Please choose the date that before alarm in format dd/MM/yyyy");
+                                    System.out.println("The chosen alarm time shall be before (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Event> tempArr6 = new ArrayList<Event>();
                                     for (int i = 0; i < SelectedArrForEvent.size(); i++) {
@@ -577,7 +569,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("7"):
-                                    System.out.println("Please choose the date that after alarm in format dd/MM/yyyy");
+                                    System.out.println("The chosen alarm time shall be after (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Event> tempArr7 = new ArrayList<Event>();
                                     for (int i = 0; i < SelectedArrForEvent.size(); i++) {
@@ -589,7 +581,7 @@ public class Controller {
                                     wrongInputInside = false;
                                     break;
                                 case ("8"):
-                                    System.out.println("Please choose the date that equal alarm in format dd/MM/yyyy");
+                                    System.out.println("The chosen alarm time shall be on (dd/MM/yyyy): ");
                                     content = input.nextLine();
                                     ArrayList<Event> tempArr8 = new ArrayList<Event>();
                                     for (int i = 0; i < SelectedArrForEvent.size(); i++) {
@@ -606,27 +598,7 @@ public class Controller {
                                     break;
                             }
                         }
-                        System.out.println("Do you need more condition?");
-                        System.out.println("1. Yes");
-                        System.out.println("2. No");
-                        boolean wrongInputInside2 = true;
-                        while (wrongInputInside2) {
-                            String option3 = input.nextLine();
-                            switch (option3) {
-                                case ("1"):
-                                    moreConditionForEvent = true;
-                                    wrongInputInside2 = false;
-                                    break;
-                                case ("2"):
-                                    moreConditionForEvent = false;
-                                    wrongInputInside2 = false;
-                                    break;
-                                default :
-                                    System.out.println("Wrong value inputted, please type again!");
-                                    wrongInputInside2 = true;
-                                    break;
-                            }
-                        }
+                        moreConditionForEvent = requestCriteria(input);
                     }
                     result = 0;
                     if (SelectedArrForEvent.size() != 0) {
@@ -708,7 +680,7 @@ public class Controller {
                     ArrayList<Contact> SelectedArrForContact = ArrForContact;
                     boolean moreConditionForContact = true;
                     while (moreConditionForContact) {
-                        System.out.println("Please choose the condition for task:");
+                        System.out.println("Please choose the condition for contact:");
                         System.out.println("1. The string contain in name");
                         System.out.println("2. The string not contain in name");
                         System.out.println("3. The string contain in address");
@@ -798,27 +770,7 @@ public class Controller {
                                     break;
                             }
                         }
-                        System.out.println("Do you need more condition?");
-                        System.out.println("1. Yes");
-                        System.out.println("2. No");
-                        boolean wrongInputInside2 = true;
-                        while (wrongInputInside2) {
-                            String option3 = input.nextLine();
-                            switch (option3) {
-                                case ("1"):
-                                    moreConditionForContact = true;
-                                    wrongInputInside2 = false;
-                                    break;
-                                case ("2"):
-                                    moreConditionForContact = false;
-                                    wrongInputInside2 = false;
-                                    break;
-                                default :
-                                    System.out.println("Wrong value inputted, please type again!");
-                                    wrongInputInside2 = true;
-
-                            }
-                        }
+                        moreConditionForContact = requestCriteria(input);
                     }
                     result = 0;
                     if (SelectedArrForContact.size() != 0) {
@@ -902,11 +854,10 @@ public class Controller {
                     break;
             }
         }
-        mainInterface();
+        return;
     }
 
-    public static void printAllInterface() {
-        Scanner input = new Scanner(System.in);
+    public static void printAllInterface(Scanner input) {
         System.out.println("Please input the file name for outputted pim file");
         String filename = input.nextLine();
         final String path = "repository\\" + filename + ".pim";
@@ -951,13 +902,6 @@ public class Controller {
         } catch (IOException e) {
             System.out.println("File already exists.");
         }
-        mainInterface();
-    }
-
-    public static void main(String[] args) {
-        // Make directory for first operation
-        Controller.makeDir();
-        Controller.mainInterface();
-
+        return;
     }
 }

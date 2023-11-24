@@ -1,12 +1,7 @@
-import java.io.File;  // Import the File class
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.io.IOException;
-import java.io.FileWriter;   // Import the FileWriter class
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner; // Import the Scanner class to read text files
 
 class Event extends PIR {
 
@@ -29,9 +24,7 @@ class Event extends PIR {
     public void setStart(String s) {
         try {
             this.start = new SimpleDateFormat("dd/MM/yyyy").parse(s);
-        }   catch (ParseException e) {
-            System.out.println("Failed reading");
-        }
+        }   catch (ParseException e) {}
     }
     public void setAlarm(String s) {
         try {
@@ -40,71 +33,12 @@ class Event extends PIR {
             if (isStart('<', s)) {
                 System.out.println("Alarm Time is after the start time!");
             }
-        }   catch (ParseException e) {
-            System.out.println("Failed reading");
-        }
+        }   catch (ParseException e) {}
     }
     // Getter
     public String getDescription() {return this.description;}
     public Date getStart() {return this.start;}
     public Date getAlarm() {return this.alarm;}
-
-    public void readFile(String filename) {
-
-        final String path = "repository\\" + filename + ".pim";
-
-        try {
-            File myObj = new File(path);
-            Scanner myReader = new Scanner(myObj);
-
-            // Line 1: Classification Code
-            if ((myReader.nextLine()).equals("E")) {
-                // Line 2: description
-                setDescription(myReader.nextLine());
-                // Line 3: start time
-                setStart(myReader.nextLine());
-                // Line 4: alarm time
-                setAlarm(myReader.nextLine());
-            }
-            myReader.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("File is not found");
-            e.printStackTrace();
-        }
-    }
-
-    public void writeFile() {
-
-        final String path = "repository\\" + getFN() + ".pim";
-
-        try {
-            // Create file
-            File myObj = new File(path);
-            if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
-
-                // Write to file
-                FileWriter myWriter = new FileWriter(path);
-                myWriter.write("E\n"); // Line 1: Classification Code
-                myWriter.write(getDescription() + "\n"); // Line 2: Description
-
-                // Line 3: Start Time
-                DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-                myWriter.write(df.format(getStart()) + "\n");
-
-                // Line 4: Alarm
-                myWriter.write(df.format(getAlarm()) + "\n");
-
-                myWriter.close();
-                System.out.println("Successfully wrote to the file.");
-            } else {
-                throw new IOException();
-            }
-        } catch (IOException e) {
-            System.out.println("File already exists.");
-        }
-    }
-
     public String toString() {
 
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
