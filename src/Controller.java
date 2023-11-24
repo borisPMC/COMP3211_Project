@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -54,7 +51,7 @@ public class Controller {
                     System.out.println("Goodbye!");
                     wrongInput = false;
                     System.exit(0);
-                default :
+                default:
                     System.out.println("Wrong value inputted, please type again!");
                     wrongInput = true;
                     break;
@@ -113,7 +110,7 @@ public class Controller {
                         myReader.close();
                     } catch (FileNotFoundException e) {
                         System.out.println("File is not found");
-                        e.printStackTrace();
+                        mainInterface();
                     }
                     wrongInput = false;
                     break;
@@ -171,7 +168,7 @@ public class Controller {
                                 ArrForContact.add(contact);
                                 wrongInputInside = false;
                                 break;
-                            default :
+                            default:
                                 System.out.println("Wrong value inputted, please type again!");
                                 wrongInputInside = true;
                                 break;
@@ -267,6 +264,7 @@ public class Controller {
                         System.out.println("Please choose from specify Note");
                         for (int i = 0; i < SelectedArrForNote.size(); i++) {
                             System.out.println(index + "  " + SelectedArrForNote.get(i).toString());
+                            index++;
                         }
                         Boolean wrongInputInside3 = true;
                         while (wrongInputInside3) {
@@ -428,6 +426,7 @@ public class Controller {
                         System.out.println("Please choose from specify Task");
                         for (int i = 0; i < SelectedArrForTask.size(); i++) {
                             System.out.println(index + "  " + SelectedArrForTask.get(i).toString());
+                            index++;
                         }
                         boolean wrongInputInside3 = true;
                         while (wrongInputInside3) {
@@ -635,6 +634,7 @@ public class Controller {
                         System.out.println("Please choose from specify Event");
                         for (int i = 0; i < SelectedArrForEvent.size(); i++) {
                             System.out.println(index + "  " + SelectedArrForEvent.get(i).toString());
+                            index++;
                         }
                         boolean wrongInputInside3 = true;
                         while (wrongInputInside3) {
@@ -826,6 +826,7 @@ public class Controller {
                         System.out.println("Please choose from specify Event");
                         for (int i = 0; i < SelectedArrForContact.size(); i++) {
                             System.out.println(index + "  " + SelectedArrForContact.get(i).toString());
+                            index++;
                         }
                         boolean wrongInputInside3 = true;
                         while (wrongInputInside3) {
@@ -954,7 +955,6 @@ public class Controller {
     }
 
     public static void main(String[] args) {
-
         // Make directory for first operation
         Controller.makeDir();
         Controller.mainInterface();
