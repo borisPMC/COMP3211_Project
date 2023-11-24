@@ -157,8 +157,18 @@ public class Controller {
                         String optionInside = input.nextLine();
                         switch (optionInside) {
                             case ("1"):
+                                String fileNameForNote = "";
                                 System.out.println("Please input the title of note");
-                                String fileNameForNote = input.nextLine();
+                                boolean sameTitleNote = true;
+                                while (sameTitleNote) {
+                                    fileNameForNote = input.nextLine();
+                                    if (Note.checkSameTitle(fileNameForNote, ArrForNote)) {
+                                        System.out.println("Same title already created, please type again!");
+                                        sameTitleNote = true;
+                                    } else {
+                                        sameTitleNote = false;
+                                    }
+                                }
                                 System.out.println("Please input the texts to the note");
                                 String contentForContent = input.nextLine();
                                 Note note = new Note(fileNameForNote, contentForContent);
@@ -166,32 +176,92 @@ public class Controller {
                                 wrongInputInside = false;
                                 break;
                             case ("2"):
+                                String fileNameForTask = "";
+                                String deadlineForTask = "";
                                 System.out.println("Please input the title of task");
-                                String fileNameForTask = input.nextLine();
+                                boolean sameTitleTask = true;
+                                while (sameTitleTask) {
+                                    fileNameForTask = input.nextLine();
+                                    if (Task.checkSameTitle(fileNameForTask, ArrForTask)) {
+                                        System.out.println("Same title already created, please type again!");
+                                        sameTitleTask = true;
+                                    } else {
+                                        sameTitleTask = false;
+                                    }
+                                }
                                 System.out.println("Please input the descriptions of task");
                                 String descriptionsForTask = input.nextLine();
                                 System.out.println("Please input the deadline of tasks in format dd/MM/yyyy");
-                                String deadlineForTask = input.nextLine();
+                                boolean wrongDateTask = true;
+                                while (wrongDateTask) {
+                                    deadlineForTask = input.nextLine();
+                                    if (Task.checkDate(deadlineForTask)) {
+                                        System.out.println("Wrong format for deadline, please type again!");
+                                        wrongDateTask = true;
+                                    } else {
+                                        wrongDateTask = false;
+                                    }
+                                }
                                 Task task = new Task(fileNameForTask, descriptionsForTask, deadlineForTask);
                                 ArrForTask.add(task);
                                 wrongInputInside = false;
                                 break;
                             case ("3"):
-                                System.out.println("Please input the descriptions of event");
-                                String fileNameForEvent = input.nextLine();
+                                String fileNameForEvent = "";
+                                String startingTimeForEvent = "";
+                                String alarmForEvent = "";
+                                System.out.println("Please input the title of event");
+                                boolean sameTitleEvent = true;
+                                while (sameTitleEvent) {
+                                    fileNameForEvent = input.nextLine();
+                                    if (Event.checkSameTitle(fileNameForEvent, ArrForEvent)) {
+                                        System.out.println("Same title already created, please type again!");
+                                        sameTitleEvent = true;
+                                    } else {
+                                        sameTitleEvent = false;
+                                    }
+                                }
                                 System.out.println("Please input the descriptions of event");
                                 String descriptionsForEvent = input.nextLine();
                                 System.out.println("Please input the starting times of event in format dd/MM/yyyy");
-                                String startingTimeForEvent = input.nextLine();
+                                boolean wrongStartingTime = true;
+                                while (wrongStartingTime) {
+                                    startingTimeForEvent = input.nextLine();
+                                    if (Event.checkDate(startingTimeForEvent)) {
+                                        System.out.println("Wrong format for starting times, please type again!");
+                                        wrongStartingTime = true;
+                                    } else {
+                                        wrongStartingTime= false;
+                                    }
+                                }
                                 System.out.println("Please input the alarm of event in format dd/MM/yyyy");
-                                String alarmForEvent = input.nextLine();
+                                boolean wrongAlarmTime = true;
+                                while (wrongAlarmTime) {
+                                    alarmForEvent = input.nextLine();
+                                    if (Event.checkDate(alarmForEvent)) {
+                                        System.out.println("Wrong format for alarm, please type again!");
+                                        wrongAlarmTime = true;
+                                    } else {
+                                        wrongAlarmTime= false;
+                                    }
+                                }
                                 Event event = new Event(fileNameForEvent, descriptionsForEvent, startingTimeForEvent, alarmForEvent);
                                 ArrForEvent.add(event);
                                 wrongInputInside = false;
                                 break;
                             case ("4"):
+                                String nameForContact = "";
                                 System.out.println("Please input the name of contact");
-                                String nameForContact = input.nextLine();
+                                boolean sameTitleContact = true;
+                                while (sameTitleContact) {
+                                    nameForContact = input.nextLine();
+                                    if (Contact.checkSameTitle(nameForContact, ArrForContact)) {
+                                        System.out.println("Same contact person already created, please type again!");
+                                        sameTitleContact = true;
+                                    } else {
+                                        sameTitleContact= false;
+                                    }
+                                }
                                 System.out.println("Please input the address of contact");
                                 String addressForContact = input.nextLine();
                                 System.out.println("Please input the mobile number of contact");
@@ -454,8 +524,18 @@ public class Controller {
                                     wrongInputInside4 = false;
                                     break;
                                 case ("2"):
+                                    String date = "";
                                     System.out.println("Please type the new deadline for task in format dd/MM/yyyy");
-                                    String date = input.nextLine();
+                                    boolean wrongDateTask = true;
+                                    while (wrongDateTask) {
+                                        date = input.nextLine();
+                                        if (Task.checkDate(date)) {
+                                            System.out.println("Wrong format for deadline, please type again!");
+                                            wrongDateTask = true;
+                                        } else {
+                                            wrongDateTask = false;
+                                        }
+                                    }
                                     ArrForTask.get(result).setDeadline(date);
                                     System.out.println("Successfully modified");
                                     wrongInputInside4 = false;
@@ -643,15 +723,35 @@ public class Controller {
                                     wrongInputInside4 = false;
                                     break;
                                 case ("2"):
+                                    String startTime = "";
                                     System.out.println("Please type the new starting time for task in format dd/MM/yyyy");
-                                    String startTime = input.nextLine();
+                                    boolean wrongStartingTime = true;
+                                    while (wrongStartingTime) {
+                                        startTime = input.nextLine();
+                                        if (Event.checkDate(startTime)) {
+                                            System.out.println("Wrong format for starting times, please type again!");
+                                            wrongStartingTime = true;
+                                        } else {
+                                            wrongStartingTime= false;
+                                        }
+                                    }
                                     ArrForEvent.get(result).setStart(startTime);
                                     System.out.println("Successfully modified");
                                     wrongInputInside4 = false;
                                     break;
                                 case ("3"):
+                                    String alarm = "";
                                     System.out.println("Please type the new alarm for task in format dd/MM/yyyy");
-                                    String alarm = input.nextLine();
+                                    boolean wrongAlarmTime = true;
+                                    while (wrongAlarmTime) {
+                                        alarm = input.nextLine();
+                                        if (Event.checkDate(alarm)) {
+                                            System.out.println("Wrong format for alarm, please type again!");
+                                            wrongAlarmTime = true;
+                                        } else {
+                                            wrongAlarmTime= false;
+                                        }
+                                    }
                                     ArrForEvent.get(result).setAlarm(alarm);
                                     System.out.println("Successfully modified");
                                     wrongInputInside4 = false;
@@ -808,8 +908,18 @@ public class Controller {
                             String option3 = input.nextLine();
                             switch (option3) {
                                 case ("1"):
+                                    String content2 = "";
                                     System.out.println("Please type the new name for task");
-                                    String content2 = input.nextLine();
+                                    boolean sameTitleContact = true;
+                                    while (sameTitleContact) {
+                                        content2 = input.nextLine();
+                                        if (Contact.checkSameTitle(content2, ArrForContact)) {
+                                            System.out.println("Same contact person already created, please type again!");
+                                            sameTitleContact = true;
+                                        } else {
+                                            sameTitleContact= false;
+                                        }
+                                    }
                                     ArrForContact.get(result).setName(content2);
                                     System.out.println("Successfully modified");
                                     wrongInputInside4 = false;
