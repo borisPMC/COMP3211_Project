@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Note extends PIR {
 
     private String content;
@@ -25,5 +27,15 @@ class Note extends PIR {
     // Searching
     public boolean isContent(String arg) {
         return PIR.isContainString(getContent(), arg);
+    }
+
+    // Checking for creating PIR
+    public static boolean checkSameTitle(String content, ArrayList<Note> list) {
+        for (int i = 0;i < list.size();i++) {
+            if (content.equals(list.get(i).filename)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
