@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 class Contact extends PIR {
 
     private String name;
@@ -36,5 +38,15 @@ class Contact extends PIR {
     }
     public boolean isPhone(String arg) {
         return PIR.isContainString(getPhone(), arg);
+    }
+
+    // Checking for creating PIR
+    public static boolean checkSameTitle(String content, ArrayList<Contact> list) {
+        for (int i = 0;i < list.size();i++) {
+            if (content.equals(list.get(i).filename)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
