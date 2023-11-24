@@ -1,0 +1,17 @@
+This is the documentation for elaborating information that relevant to the user
+
+Type of PIRs
+
+- Note (Title, Content)
+- Task (Title, Description, Deadline)
+- Event (Title, Description, Start Time, Alarm Time)
+- Contact (Name, Address, Phone Number)
+
+Restriction for each PIR
+
+Generally, change line character (\n) is forbibiden
+
+- Note: None
+- Task: Deadline input must be in "dd/MM/yyyy" format
+- Event: Start Time and Alarm Time must be in "dd/MM/yyyy" format
+- Contact: None

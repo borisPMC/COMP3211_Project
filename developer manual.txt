@@ -9,14 +9,14 @@ Environment requirement:
 Compilation procedure:
 
 1. Open IntelliJ IDEA
-2. Open src/Main.java
+2. Open src/model/Main.java
 3. Click "Run Main.java" at the top-right, the IDE compiles it automatically
 4. Interact PIM on the command line interface at bottom-left
 
 Debugging procedure:
 
 1. Open IntelliJ IDEA
-2. Open any source code files in src folder
+2. Open any source code files in src/model
 3. Pin desired code line by clicking the RHS of the line number (for monitoring behaviour of the program)
 4. Open Main.java
 5. Click "Debug Main.java" at the top-right
@@ -33,8 +33,9 @@ test_case_1.pim
 test_case_2.pim
 test_case_3.pim
 
-To perform:
+To test coverage:
 1. Open IntelliJ IDEA
 2. Open any test class in test folder
-3. Run the code.
+3. Right click test folder and click "Run 'All Tests' with Coverage".
+4. View the code coverage
 
