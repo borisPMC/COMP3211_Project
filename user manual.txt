@@ -1,0 +1,37 @@
+User Manual for PIM
+Introduction
+
+Welcome to the user manual for Main.java. This document will guide you on how to interact with the program effectively.
+
+Type of PIRs
+
+- Note (Title, Content)
+- Task (Title, Description, Deadline)
+- Event (Title, Description, Start Time, Alarm Time)
+- Contact (Name, Address, Phone Number)
+
+Restriction for each PIR
+
+- Generally, change line character (\n) is forbidden.
+- Note: None
+- Task: Deadline input must be in "dd/MM/yyyy" format
+- Event: Start Time and Alarm Time must be in "dd/MM/yyyy" format
+- Contact: None
+
+User Interaction
+The program interacts with users via the console. It will prompt you to provide input for various operations.
+
+Command Format
+- The program supports a number of commands for managing PIRs.
+- When prompted, you should enter the required command in the console.
+- The specific format of the commands will depend on the operation you wish to perform.
+- The program will guide you on the correct command format at each step.
+
+Error Handling
+- If an invalid command is entered, the program will display an error message and prompt you to enter the command again.
+- Please ensure to enter the commands in the correct format as guided by the program.
+
+Output Interpretation
+- The program will display messages in the console to indicate the outcome of your commands.
+- For instance, if you create a new PIR, the program will confirm that the PIR has been created successfully.
+- Please pay attention to these messages as they provide important feedback about your actions.
