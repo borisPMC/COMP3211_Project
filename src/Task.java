@@ -1,6 +1,7 @@
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 class Task extends PIR {
@@ -43,5 +44,25 @@ class Task extends PIR {
     }
     public boolean isDeadline(char operator, String arg) { // arg format: dd/MM/yyyy
         return PIR.isDateSatisfy(getDeadline(), operator, arg);
+    }
+
+    // Checking for creating PIR
+    public static boolean checkSameTitle(String content, ArrayList<Task> list) {
+        for (int i = 0;i < list.size();i++) {
+            if (content.equals(list.get(i).filename)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean checkDate(String content) {
+        Date testingDate;
+        try {
+            testingDate = new SimpleDateFormat("dd/MM/yyyy").parse(content);
+            return false;
+        }   catch (ParseException e) {
+            return true;
+        }
     }
 }
