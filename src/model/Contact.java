@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Contact extends PIR {
 
     private String name;
