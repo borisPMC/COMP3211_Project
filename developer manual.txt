@@ -56,6 +56,7 @@ test_case:
 - case_1.txt
 - case_2.txt
 - case_3.txt
+- CreateServiceTest.txt
 
 Location for each deliverable (take COMP3211_Project as the root):
 

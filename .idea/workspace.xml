@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0e2477f0-4a59-45a2-9ca1-beb12acb8199" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COMP3211_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/COMP3211_Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Contact.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Contact.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Note.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Note.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ModificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ModifyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/developer manual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/developer manual.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +58,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -171,6 +165,11 @@
           <line>58</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/Controller.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -185,6 +184,6 @@
     <SUITE FILE_PATH="coverage/COMP3211_Project$ControllerTest.ic" NAME="ControllerTest Coverage Results" MODIFIED="1700837869360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COMP3211_Project$ControllerTest_testMainInterface.ic" NAME="ControllerTest.testMainInterface Coverage Results" MODIFIED="1700821659695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COMP3211_Project$Controller.ic" NAME="Controller Coverage Results" MODIFIED="1699897080440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/Note_java$All_in_COMP3211_Project.ic" NAME="All in COMP3211_Project Coverage Results" MODIFIED="1700911217585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Note_java$All_in_COMP3211_Project.ic" NAME="All in COMP3211_Project Coverage Results" MODIFIED="1700911265655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
