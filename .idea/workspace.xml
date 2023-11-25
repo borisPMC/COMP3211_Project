@@ -5,8 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e2477f0-4a59-45a2-9ca1-beb12acb8199" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/developer manual.txt" beforeDir="false" afterPath="$PROJECT_DIR$/developer manual.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/css/coverage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/css/highlight-idea.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/img/arrowDown.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/img/arrowUp.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/js/highlight.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_BLOCK.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_CLASS.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_CLASS_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_LINE.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_LINE_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_METHOD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_METHOD_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/index_SORT_BY_NAME_DESC.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test Coverage Report/ns-1/sources/source-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/developer manual.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP3211_Project/model/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/COMP3211_Project/model/CreateService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/COMP3211_Project/model/CreateService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/COMP3211_Project/coverage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/COMP3211_Project/coverage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/CreateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CreateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/coverage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/coverage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user manual.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,12 +203,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/CreateService.java</url>
-          <line>58</line>
+          <line>59</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/Controller.java</url>
-          <line>167</line>
+          <line>166</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
@@ -181,6 +222,7 @@
     <SUITE FILE_PATH="coverage/COMP3211_Project$TaskTest.ic" NAME="TaskTest Coverage Results" MODIFIED="1699959861567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COMP3211_Project$ControllerTest_testInputCase2.ic" NAME="ControllerTest.testInputCase2 Coverage Results" MODIFIED="1700829749270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COMP3211_Project$TaskTest_testToString.ic" NAME="TaskTest.testToString Coverage Results" MODIFIED="1699959850837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Main_java$All_in_COMP3211_Project.ic" NAME="All in COMP3211_Project Coverage Results" MODIFIED="1700918038805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COMP3211_Project$ControllerTest.ic" NAME="ControllerTest Coverage Results" MODIFIED="1700837869360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COMP3211_Project$ControllerTest_testMainInterface.ic" NAME="ControllerTest.testMainInterface Coverage Results" MODIFIED="1700821659695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/COMP3211_Project$Controller.ic" NAME="Controller Coverage Results" MODIFIED="1699897080440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

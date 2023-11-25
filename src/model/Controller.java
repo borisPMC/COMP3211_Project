@@ -120,7 +120,6 @@ public class Controller {
                     wrongInput = true;
             }
         }
-        System.out.println("Successfully added PIR");
         return;
     }
 

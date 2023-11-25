@@ -44,6 +44,7 @@ public class CreateService {
                     ArrForContact.add(contact);
                 }
             }
+            System.out.println("Successfully added PIR");
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("File is not found");
@@ -67,6 +68,7 @@ public class CreateService {
         String contentForContent = input.nextLine();
         Note note = new Note(fileNameForNote, contentForContent);
         ArrForNote.add(note);
+        System.out.println("Successfully added PIR");
     }
 
     public static void createTask(Scanner input, ArrayList<Task> ArrForTask) {
@@ -98,6 +100,7 @@ public class CreateService {
         }
         Task task = new Task(fileNameForTask, descriptionsForTask, deadlineForTask);
         ArrForTask.add(task);
+        System.out.println("Successfully added PIR");
     }
 
     public static void createEvent(Scanner input, ArrayList<Event> ArrForEvent) {
@@ -141,6 +144,7 @@ public class CreateService {
         }
         Event event = new Event(fileNameForEvent, descriptionsForEvent, startingTimeForEvent, alarmForEvent);
         ArrForEvent.add(event);
+        System.out.println("Successfully added PIR");
     }
 
     public static void createContact(Scanner input, ArrayList<Contact> ArrForContact) {
@@ -162,5 +166,6 @@ public class CreateService {
         String mobileNumberForContact = input.nextLine();
         Contact contact = new Contact(nameForContact, addressForContact, mobileNumberForContact);
         ArrForContact.add(contact);
+        System.out.println("Successfully added PIR");
     }
 }
