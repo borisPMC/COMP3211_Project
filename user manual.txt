@@ -12,7 +12,11 @@ Type of PIRs
 
 Restriction for each PIR
 
-- Generally, change line character (\n) is forbidden.
+- Generally,
+- change line character (\n) is forbidden.
+- repeated PIR title/name is not allowed.
+
+- Specifically,
 - Note: None
 - Task: Deadline input must be in "dd/MM/yyyy" format
 - Event: Start Time and Alarm Time must be in "dd/MM/yyyy" format
