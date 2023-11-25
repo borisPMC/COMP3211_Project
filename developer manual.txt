@@ -2,8 +2,9 @@ Developer Manual
 This manual provides the necessary information to set up the development environment, compile, build, and debug the project.
 
 Environment Requirements
-- JDK 19.0.2
+- JDK ^19.0.2
 - IntelliJ IDEA Community Edition 2021.2.3
+- JUnit ^5.8.2
 
 Setting Up the Project
 - Open IntelliJ IDEA.
@@ -13,9 +14,16 @@ Setting Up the Project
 Compilation Procedure
 - Open the src/model/Main.java file in IntelliJ IDEA.
 - Click on Build > Build Project in the menu bar. IntelliJ IDEA compiles the project automatically.
-- Running the Project
+- Class files are stored at out/production/COMP3211_Project/model
+
+Running the Project
+via IDEA
 - Open the src/model/Main.java file in IntelliJ IDEA.
 - Click on the green arrow next to the main method, or click Run > Run 'Main' in the menu bar.
+via command line
+- Open command line
+- Change directory to out/production/COMP3211_Project/model
+- run command: java model.Main
 
 Debugging Procedure
 - Open any source code files in src/model.
@@ -37,11 +45,19 @@ To test coverage:
 - View the code coverage in the Coverage tool window.
 
 Warning
-The following PIM files are for test usage. Deleting them will result in failure in unit tests:
+The following files are for test usage. Refactoring / deleting them will result in failure in unit tests:
 
+Repository:
 - input_test.pim
 - test_case_1.pim
 - test_case_2.pim
 - test_case_3.pim
+test_case:
+- case_1.txt
+- case_2.txt
+- case_3.txt
+
+Location for each deliverable (take COMP3211_Project as the root):
+
 
 Thank you for reading this manual.
